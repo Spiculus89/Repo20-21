@@ -39,7 +39,10 @@ capsLock.addEventListener('click', () => {
 })
 
 enter.addEventListener('click', () => textArea.innerHTML += '\n')
-submit.addEventListener('click', () => alert(textArea.innerHTML))
+submit.addEventListener('click', () => {
+    alert(textArea.innerHTML)
+    textArea.innerHTML = ''
+})
 
 for(let i=0; i<keys.length; i++){
     keys[i].addEventListener('click', () => {
